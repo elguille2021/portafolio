@@ -1,0 +1,412 @@
+
+
+body {
+    box-sizing: border-box;
+    /*background-color: var(--color-de-fondo) ; */
+    font-family: 'Raleway';  /* le da formato (esta letra ya contiene negritas) a todo lo que esté en el bosy en el texto de la página */
+    margin: 0;
+    padding: 0;
+    line-height: 1; 
+}
+
+ol, ul,li {
+    list-style: none;
+}     /*quita las viñetas de las listas no enlazadas*/
+
+a{
+    text-decoration: none;
+    color: var(--quita-color-y-subrayado-de-links);    
+}
+
+/*
+body{
+    font-family: 'Raleway', sans-serif;
+}  lo quite porque estaba  probando otra forma de hacerlo */
+
+/* seccion del header (del fondo del menú y con fixed se fija)   MemoDev23*/
+.menu_header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 100;
+    background-color: #f3f1f1f8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/*coloca en lugar de lista vertical,  horizontal el menú de items (con fondo blanco fijo del header) y se ve mucho mejor */
+.menu_list{
+    display: flex; /*flex coloca lo que haya en la siguiente columna por eso se ve horizontal */ 
+    gap: 3rem;
+}
+
+.menu_list_item a{
+    transition: 150ms;
+}
+
+.menu_list_item a:hover, .links-social-media li a:hover{
+    border-bottom: 2px solid #219ebc;
+     font-size: 18px;  /*efecto que agranda cad item del menú a pasar el mouse incluso los a href de github y linkedin */
+}
+
+/*.descripcion{
+    display: flex;
+    justify-content: center;
+
+} quite este porque en el siguiente con una sola linea (y por medio de la (,) ) apliqué un efecto en dos clases a la vez 
+pero como quise  que se distinguieran con 2 colores distintos le quite la coma ,  y los separa a social-media y a descripcion cada 
+quien con su estilo por separado en sus clases  antes estaba asi
+
+.descripcion, .links-social-media{ 
+    display: flex;
+    justify-content: center;
+    gap: 2rem;  }*/
+
+.links-social-media{   /*mueve al centro los links de github y linkedin y con la , como vimos en el curso de grid (curs 2 despúes del de flexbox) sirve para concatenar dos clases*/
+    display: flex;
+    justify-content: center;
+    gap: 2rem;  /*2 indica el doble del tamaño original */
+    /* font-size: 20px; */
+    
+    
+}
+.descripcion{
+    display: flex;     /* para centrar texto display:flex va junto con justify:center */
+    justify-content: center;
+    color: rgb(145, 5, 5);
+    font-family: 'Raleway';
+    /*font-size: large ; este agranda pero no lo pone en negritas*/
+    /* font-weight: bold;  se ve muy resaltado y se ve mejor sin negritas, ya con  el color en wine es suficiente */
+}
+
+/*fondo de color de estas 2 partes o clases */
+.titulo-sobre-mi{
+    font-size: 20px;
+    color: #495057;    /* Amarillo #c7d453; */
+}
+
+.sobre-mi{
+    padding: 3rem 5rem;
+    background-color: #f0e8e3;/* #EAF2FD; azul, #e9dad2; color carne , #f0e8e3; carne tono aun mas claro se ve mejor */
+    line-height: 1.4rem;
+}
+                /*(skills-titulo)-las habilidades que tengo para ofrecer - y aparte los textos de cada apartado como:   */
+.skills-titulo, .hobbies-titulo, .formacion-titulo, .proyectos-titulo, .contacto-titulo{   
+    font-weight: bold;
+    font-size: 26px;
+    color:  #464646;
+}
+
+.skills{
+    text-align: center;
+}
+
+
+.skills-container, .hobbies-container{  /*coloca las habilidades y los pasatiempos y sus iconos de vertical(parados o en lista) a horizontal (en en fila o en linea) */
+    display: flex;  /*flex coloca lo que haya en la siguiente columna por eso se ve horizontal */
+    justify-content: space-around;
+}
+
+.skill-name, .hobbies-name{
+    padding: 3px;
+    font-weight: bold;
+    user-select: none;
+}
+
+/* .skill-item, .hobbies-item{ /*tamaño de los iconos 
+    transition: 150ms all;
+}
+
+.skill-item:hover, .hobbies-item:hover{
+    transform: scale(1.1);
+} */
+
+.hobbies{
+    text-align: center;
+}
+
+
+.hobbies-titulo, .formacion-titulo, .contacto-titulo{
+    margin-top: 4rem;
+}
+/* <h2> MemoDev23 <h1> Hola mi nombre es.. <h3> participante del proyecto  y <h4> Encriptador  --estos ya tienen tamaños propios 
+excepto la class skill-titulo  "las habilidades que ...ofrecer son "  esa es la unica con h3 que aparte formatee con color aparte */
+
+.formación{
+    width: 100%;
+    background-color: #e9dad2;  /*   #EAF2FD; azul cielo */
+}  /*#e3bca8;  color carne  , #e9dad2; Color de fondo mas claro */
+
+.formacion-titulo, .proyectos-titulo, .contacto-titulo{
+    padding-top: 3rem;
+    text-align: center;
+}
+
+/* centra el texto de  participante del proyecto.. en curso */
+.formacion-container{   
+    padding: 1rem 0;
+    text-align: center;
+}
+
+
+
+.formacion-item span{   /* <span> En curso </span>  span es la parte de ese ultimo texto de ese párrafo POR ESO LO PONE CON ESE AZUL TURQUESA  */
+    color: #219ebc;
+}
+
+.formacion-item a{   /* toca la clase formación (o sea el texto de Oracle ONE) + el subrayado del a href */
+    border-bottom: 2px solid #219ebc;
+    transition: 150ms all;
+}
+
+/*NO IMPORTA EL ORDEN  ES DECIR QUE EN EL HTML VAYA ANTES EL SUBRAYADO QUE EL TEXTO entre <span>  Y AQUI EN CSS LOS PUSE ALREVÉS
+.formacion-item span{   /* <span> En curso </span>  span es la parte de ese ultimo texto de ese párrafo POR ESO LO PONE CON ESE AZUL TURQUESA  
+    color: #219ebc;
+}  VEMOS QUE EN CSS  AUNQUE EL ORDEN DE ELEMENTOS CAMBIEN LOS EFECTOS NO SE ALTERAN O QUEDAN INTACTOS */
+
+
+.formacion-item a:hover{     /* y con este hover el subrayado cambia de tonalidad de color azul turquesa a un color mas fuerte */
+    border-bottom: 2px solid #264653;    /*a:hover va sin espacios sino no hay efecto  */
+    color: #14213d;
+}
+           /*quitando desde aqui antes de los Botones quito el centrado y disminuyo lo agrandado de las imágenes de proyectos  y de los textos /*
+           -------------------------------------------------------------------------------------------------------------------------------------
+/* aplicando efectos a ambas clases separando por (,) texto del proyecto del encriptador y el hangman game*/
+.proyecto-1, .proyecto-2{       
+    display: flex;
+    align-items: center;
+    justify-content: center;    /* este centra ambos textos a la vez contenidos en ambas clases */
+}
+
+.proyecto-contenido{             /* y este da un espacio entre elementos */
+    padding-left: 1rem;
+}
+
+.proyecto-contenido-2{           /* este tambien da un espacio */
+    padding-right: 1rem;
+}
+
+/*mas efectos (agranda las imagenes de las fotos de los proyectos),  antes de los de los botones */
+
+.proyecto-1-img, .proyecto-2-img{
+    width: 50%;
+}
+
+.proyecto-links{
+    display: flex;
+    gap: 2rem;  /* da un espacio entre los hipervinculos del repo y el sitio */
+}
+
+.proyecto-links-2{
+    margin-left: 27px;
+}
+
+/*botones*/         /*INCREIBLE CON CSS afecté el  texto del <a href="https://github.com/elguille2021/proyecto-hangman-game/" target="_blank">Repositorio</a></li>
+y aunque no puse un botón como en esta parte "como si lo hice en el area del formulario de contacto con input type button" 
+lo que hice con CSS fue encerrar en un cuadro redondeado el texto del a href o sea el texto del hipervinculo CREANDO LA ILUSION DE QUE ES UN BOTÓN del tipo Boostrap sin serlo
+pero son efectos que se pueden conseguir con CSS y resaltan mucho ahorrando memoria porque no tuvimos que traer ninguna otra librería*/
+.btn a{              
+    padding-top: 3px;
+    border-radius: .5rem;
+    color: #000;
+    padding: 1rem;
+}
+         /*el transition crea un efecto apenas perceptible como que aumenta pero no se ve mucho porque encerramos en un cuadro un texto simulando un botón */
+.btn-1, .btn-2, .btn-repo, .btn-probar{
+    transition: 150ms all;
+}
+
+.btn-1 a{
+    background-color: #219ebc;
+    font-style: italic;
+}
+
+/*continuando boton 1 y formateo  o colores del botón 2  ambos del Encriptador */
+.btn-2 a{
+    background-color: #90e0ef;
+    font-style: italic;
+}
+
+.btn-1 a:hover{
+    background-color: #264653;
+    color: #F5F5F5;
+}
+
+.btn-2 a:hover{
+    background-color: #0077b6;
+    color: #000;
+}
+
+.btn-1:hover, .btn-2:hover, .btn-repo:hover, .btn-probar:hover{
+    transform: scale(1.05);
+}
+
+
+
+
+/* quite estos dos para dejar los dos proyectos respetando la misma alineación
+
+.proyecto-2-img{
+    margin-top: 2rem;
+} 
+
+.proyecto-contenido-2{
+    order: -1;
+}   */
+
+.btn-repo a{
+    background-color: #ffb703;
+    font-style: italic;
+}
+
+  /*color del 2do hipervinculo hangman game*/
+.btn-probar a{
+    background-color: #fb8500;
+    color: #F5F5F5;
+    font-style: italic;
+}
+
+.btn-repo a:hover{
+    background-color: #e36414;
+}
+
+.btn-probar a:hover{
+    background-color: #ff5703;  /* #ffb703 amarillo , #fb8b24 naranja; este color tenia que ser diferente para que se viera verdaderamente un cambio de color en el hipervinculo (recordando que no son botones sino hivervinculos encerrados en cuadro redondeado y con color) */
+}  /* #ff5703 es un naranja un poco mas fuerte que el naranja de probar a */
+
+/*apartado de contactos*/
+.contacto{
+    background-color: #f3edeb;  /* #EAF2FD; bluesky , #f3edeb;  este es mas clarito*/
+}
+
+/*segmentos que estilizan el formulario*/
+.contacto-container{
+    display: flex;
+    justify-content: center;
+}
+.contacto-titulo{
+    margin-bottom: 0;
+}
+
+.contacto-form{
+    margin-left: 10px;
+    width: 50%;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-form label{
+    color: #464646;
+    padding-bottom: 5px;
+}
+
+.contacto-form input{
+    width: 80%;
+    height: 2rem;
+    margin-bottom: 2rem;
+    border: none;
+    outline: none;
+    padding: 0 5px;
+    background-color: #EAF2FD;
+    border-bottom: 1px solid #0077b6;
+    font-family: 'Raleway', sans-serif;
+    transition: 150ms all;
+}
+
+.contacto-form input:focus{
+    border-left: 1px solid #0077b6;
+}
+
+.contacto-form input::placeholder{
+    color: rgba(0, 0, 0, 0.493);
+}
+
+
+/*color al textarea del mensaje */
+
+.mensaje{
+    padding: 5px;
+    resize: none;
+    width: 80%;
+    border: none;
+    outline: none;
+    background-color: #EAF2FD;
+    border-bottom: 1px solid #0077b6;
+    border-left: 1px solid #0077b6;
+}
+
+/*color al botón de enviar*/
+
+.btn-enviar{
+    padding: 5px;
+    margin-top: 2rem;
+    width: 25%;
+    height: 50px;
+    border: none;
+    background-color: #0077b6;
+    font-family: 'Raleway', sans-serif;
+    color: #F5F5F5;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: 150ms all;
+    border-radius: 5px;
+}
+
+.btn-enviar:hover{
+    transform: scale(1.05);
+}
+
+ /*clean*/
+.btn-limpiar{
+    padding: 5px;
+    margin-top: 2rem;
+    width: 25%;
+    height: 50px;
+    border: none;
+    background-color: #00b621;
+    font-family: 'Raleway', sans-serif;
+    color: #F5F5F5;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: 150ms all;
+    border-radius: 5px;
+}
+
+.btn-limpiar:hover{
+    transform: scale(1.05);
+}
+
+
+
+/*.proyecto-links{
+    display: flex;
+    gap: 2rem;  /* da un espacio entre los hipervinculos del repo y el sitio    y Modifica tamaño del botón
+} /*
+
+/*.proyecto-links-2{
+    margin-left: 27px;     modifica la posición del botón 
+}
+*/
+
+.btn-limpiar{
+    margin-top: -9.2%;   /*mueve a la derecha y sube el botón colocandolo a la par del azul */
+    margin-left: 227px;
+}
+
+
+/* container y footer */
+.footer-container{
+    text-align: center;
+    padding: 0;
+}
+
+.info-footer span{
+    color: #0077b6;
+}

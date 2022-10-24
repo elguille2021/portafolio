@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.svg">  <!-- miniatura o icono de web es la pequeña imagen que se muestra en la pestaña del navegador o en la lista de marcadores (favoritos)--> 
+    <title>Portafolio de proyectos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class="header">
+        <header class="menu_header">
+            <h1 class="menu_title">MemoDev23</h1>
+            <nav>
+                <ul class="menu_list">
+                    <li class="menu_list_item"><a href="#sobre-mi">Sobre mi</a></li>  <!--"menu_list_item" hasta el item cierro comillas en vez de solo "menu"_list_item-->
+                    <li class="menu_list_item"><a href="#skills">Tech Skills</a></li>  <!--"menu"_list_item-->
+                    <li class="menu_list_item"><a href="#hobbies">Hobbies</a></li>  
+                    <li class="menu_list_item"><a href="#formacion">Formación</a></li>
+                    <li class="menu_list_item"><a href="#proyectos">Proyectos</a></li>
+                    <li class="menu_list_item"><a href="#contacto">Contacto</a></li>
+                    <!--los # en c/u de los href permiten apuntar a un id  que desplace al usuario a esa  sección cuando esté navegando en nuestra web-->
+
+                </ul>
+            </nav>
+        </header>        
+    </section>
+    <main>   <!--seccion principal  una cosa es el menú y otra  el header, El main o la seccion principal dividido en 6 secciones; o las mismas que tiene el menú (a las que irá desplazando el usuario) o bien cuando de click en las secciones del menú-->
+        <section class="info">
+            <div class="container">            
+                <img src="assets/LogoDev/desarrollador-web.jpg"  alt="logo" class="logo">   <!--alt es texto alternativo (del logo de mi foto del portafolio) y las class (.) al igual que los id(#) son referencias para luego formatear con css-->
+                <div class="title-cointainer">
+                    <h2 class="titulo-principal">Hola &#128588;<!--&#128075; xahlee unicode -->, mi nombre es Guillermo <br> y soy Web Developer</h2>
+                    <video></video> <!--centra el video que sigue -->
+                    <video src="videos/dev-web-developer.mp4" width="640" height="480" alt="logodev" class="logo"></video> 
+                    <p class ="descripcion">Soy Ingeniero de software y actualmente estoy desarrollando habilidades (working in progress) en el programa ALURA-ONE(Oracle Next Education) LATAM <br> Mi meta es ser un desarrollador Fullstack </p>
+                    <div class="info-links">
+                        <ul class="links-social-media">
+                            <li><a href="https://github.com/elguille2021/" target="_blank">Git Hub<img src="assets/arrow.png" alt="Ir"></a> </li>
+                            <li><a href="https://www.linkedin.com/in/guillermo-s-garc%C3%ADa-devfullstack/" target="_blank">Linkedin<img src="assets/arrow.png" alt="ir"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--seccion about me-->
+<section class="about" id="sobre-mi">
+    <div class="sobre-mi">
+        <h3 class="titulo-sobre-mi">Sobre mí</h3>
+        <p class="sobre-parrafo"> Como dije soy Guillermo y soy apasionado <br> sobre todo del mundo de la tecnología y temas de programación 💻</p>
+        <p class="sobre-parrafo">Aunque empecé en soporte técnico administrativo quise dar un giro de 360° y ya llevo mas de 2 años de forma autonóma y autogestible dedicado al desarrollo web </p>   <!--🏎 &#127950; (ambos son lo mismo)-->
+        <p class="sobre-parrafo">Me quiero especializar y llegar a ser un excelente Desarrollador primero Front-End,  y luego Fullstack, me apasiona mucho el diseño de páginas web <br> y cada dia estoy aumentando mis conocimientos de este mundo tan amplio como lo es el desarrollo web. Sé que esta industria no es fácil y si no hay una puerta, me gusta crearlas; <!--crearé la mía;-->  <br>Puedo decir que soy muy autodidacta con mucha determinación y paciencia y me gusta aprender cosas por mi mismo buscando cursos en plataformas como <br> Udemy, Edteam e incluso Youtube. :D y por supuesto Discord la cual es también y ha sido para mí una gran fuente de conocimientos;</p>
+        <p class="sobre-parrafo"> además me interesan los temas de blockchain y metaverso pues ahi está el siguiente paso del desarrollo.</p> En temas individuales me gustan las carreras de F1  &#127937; <img src="assets/hobbies/racing car.png" alt="css"> y oír música sobre todo hacer lyrics o traducciones para aprender del idioma,  he hecho lyrics en Inglés, italiano y uno que otro en francés, <!--<br>--> de esa forma cuándo tenga que leer documentación para efectos y temas de desarrollo en alguno de esos idiomas será un poco más fácil hacerlo; <p> En resúmen me considero alguien que piensa out-the-box y creo firmemente en esta frase: "si la oportunidad no llama construye una puerta" -- Milton brenie</p>
+        <!--<img src="assets/firma caligrafeada.jpg" alt="firma" class="firma-img">-->
+    </div>
+</section> 
+<!--seccion Skills y habilidades-->
+<section class="skills" id="skills">
+    <h3 class="skills-titulo">Las habilidades que tengo para ofrecer son en: </h3>
+    <div class="skills-container">
+        <div class="skill-item"> <!--item o skill 1-->
+            <ul>
+                <li class="skill-img"><img src="assets/html.png" alt="css"></li>  <!--en cuanto salga la img se quita el texto alternativo, o cuando no se carga la img se ve el texto d elo que es la img para que en caso de no cargarse el usuario se de una idea de lo que es-->
+                <li class="skill-name">HTML 5</li>             
+            </ul>
+        </div>
+        <div class="skill-item"><!--skill 2-->
+            <ul>
+                <li class="skill-img"><img src="assets/css_icon.png" alt="css"></li>
+                <li class="skill-name">CSS 3 Flexbox y Grids  </li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <ul>
+                <li class="skill-img"><img src="assets/bootstrap.png" alt="Bootstrap"></li>
+                <li class="skill-name">Bootstrap</li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <ul>
+                <li class="skill-img"><img src="assets/js_icon.png" alt="JavaScript"></li>
+                <li class="skill-name">JavaScript</li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <ul>
+                <li class="skill-img"><img src="assets/react_icon.png" alt="React"></li>
+                <li class="skill-name">React</li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <ul>
+                <li class="skill-img"><img src="assets/php.png" alt="Php"></li>
+                <li class="skill-name">Php</li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <ul>
+                <li class="skill-img"><img src="assets/Mysql.png" alt="Mysql"></li>
+                <li class="skill-name">Mysql</li>
+            </ul>
+        </div>
+    </div>
+</section><!--Con cada sección que cierra da paso igual en negritas a otra nueva seccion-->
+<!--section hobbies-->
+        <section class="hobbies" id="hobbies">
+            <h3 class="hobbies-titulo">Mis pasatiempos</h3>
+            <div class="hobbies-container">
+                <div class="hobbies-item">
+                    <ul>
+                        <li class="hobbies-img"><img src="assets/hobbies/book&podcast.png" alt="lectura&podcast"></li>
+                        <li class="hobbies-name">Lectura y oir podcasts</li>
+                    </ul>
+                </div>
+                <div class="hobbies-item">
+                    <ul>  <!--width="5%" height="5%-->
+                        <li class="hobbies-img"><img src="assets/hobbies/music.png" width="25%" height="10% alt="Estudio"></li>
+                        <li class="hobbies-name">Escuchar música <br>y hacer Lyrics de temas 🎶</li>
+                    </ul>
+                </div>
+                <div class="hobbies-item">
+                    <ul>  <!--width="8%" height="10%"-->
+                        <li class="hobbies-img"><img src="assets/hobbies/learning.png" width="35%" height="10%" alt="Estudio"></li>
+                        <li class="hobbies-name">Aprendizaje autogestivo</li>
+                    </ul>
+                </div>
+                 <div class="hobbies-item">
+                    <ul> <!--width="8%" height="10%"-->
+                        <li class="hobbies-img"><img src="assets//hobbies/cine.png" width="38%" height="10%" alt="ver cine"></li>
+                        <li class="hobbies-name">Ver cine</li>
+                    </ul>
+                </div>
+                <div class="hobbies-item">
+                    <ul> <!--width="8%" height="10%"-->
+                        <li class="hobbies-img"><img src="assets/hobbies/coding.png" width="38%" height="10%" alt="Programar"></li>
+                        <li class="hobbies-name">Programar</li>
+                    </ul>
+                </div>
+                <div class="hobbies-item">
+                    <ul> <!--width="5%" height="10%"-->
+                        <li class="hobbies-img"><img src="assets/hobbies/english.png" width="35%" height="10%" alt="Ingles"></li>
+                        <li class="hobbies-name">Estudiar Inglés</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--seccion académica-->
+        <section class="formación" id="formación">
+            <h3 clas="formacion-titulo">Formación académica</h3>
+            <div class="formacion-container">
+                <ul>
+                    <li class="formacion-item"><h3>Participante del proyecto  <a href="https://www.oracle.com/co/education/oracle-next-education/" target="_blank">Oracle Next Education</a> - <span>En curso</span></h3></li>
+                </ul>
+
+            </div>
+        </section>
+        <!--seccion de proyectos-->
+        <section class="proyectos" id="proyectos"> <!--el id refiere a los etiquetas de marcadores o puntos de referencia # del menú en el header-->
+            <h3 class="proyectos-titulo">Proyectos</h3>
+            <div class="proyecto-1">
+                <img src="assets/proyectos/proyecto-1.png" width="20%" height="10%" alt="proyecto-1" class="proyecto-1-img">
+                <div class="proyecto-contenido">
+                    <h4>Encriptador de texto</h4>
+                    <p>Proyecto Desarrollado con HTML, CSS Y Javascript</p>
+                    <br>
+                    <ul class="proyecto-links">
+                        <li class="proyecto-item btn btn-1"><a href="https://github.com/elguille2021/challenge-encriptador" target="_blank">Repositorio</a></li>
+                        <li class="proyecto-item btn btn-2"><a href="https://elguille2021.github.io/challenge-encriptador/" target="_blank">Probar Encriptador</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="proyecto-2">
+                <img src="assets/proyectos/proyecto-2.png" width="20%" height="10%" alt="proyecto-2" class="proyecto-2-img">
+                <div class="proyecto-contenido-2">
+                    <h4>Juego del ahorcado</h4>
+                    <p>Juego desarrollado con HTML, CSS Y JavaScript</p>
+                    <br>
+                    <ul class="proyecto-links proyecto-links-2">
+                        <li class="proyecto-item btn btn-repo"><a href="https://github.com/elguille2021/proyecto-hangman-game/" target="_blank">Repositorio</a></li>
+                        <li class="proyecto-item btn btn-probar"><a href="https://elguille2021.github.io/proyecto-hangman-game" target="_blank">Probar Juego</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--seccion de contacto-->
+        <section class="contacto" id="contacto">
+            <h3 class="contacto-titulo">Contacto</h3>
+            <form  action="https://formsubmit.co/4df3476a44d4254a8beaa10983e9284a" method="post"> <!--action="registro.php" la cadena 4df3476a44d4254a8beaa10983e9284a es el correo--><!-- sin xammp ni htdocs NO FUNCIONA  y es inseguro(PORQUE TENGO QUE PONER CLAVES DE CORREO Ej CON PHPMailer) asi que el php por el metodo post funciona o envia datos hasta que se suba a un hosting-->
+                <div class="contacto-container">
+                    <!--<img src="assets/contacto/contacto.jpg" width="5%" height="10%" alt="contacto" class="img-contacto">-->
+                    <div class="contacto-form">
+                        <!--campos de texto: email, texto, mensaje y enviar LOS name="nombres y name="asunto"los puse tambien para usarlos con php-->
+                        <label for="Nombre" hidden>nombre</label> <!--Los campos se nombran de 2 formas puede ser con label o directo como los campos que siguen-->
+                        <Label hidden>Nombre</Label> <!--3 FORMAS de poner la misma etiqueta PUSE hidden para tener solo un campo  (pero se quedan en el código PARA VER LAS 3 FORMAS DE PONER UNA ETIQUETA de texto o cualquier elemento-->
+                        Nombre<input type="text" required placeholder="Ingrese su nombre aquí" name="nombres"  required>  <!--required o campos obligatorios-->
+                        Email<input type="email" name="email" id="email" required placeholder="ponga aquí su correo" required>
+                        Asunto<input type="text" required placeholder="Asunto" name="asunto"  required> 
+                        <!--cuadro del mensaje cols y filas-->
+                        Mensaje<textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje" placeholder="Mensaje" required></textarea>
+                        <button type="submit" class="btn-enviar">Enviar formulario</button>
+                        <button type="reset" value="limpiar" class="btn-limpiar">Limpiar  <!--<input type="reset" value="limpiar" class="btn-limpiar">-->
+                           <!-- "lIMPIAR" <button type="reset" value="limpiar" class="btn-limpiar">-->
+                           <!--<button type="reset" value="limpiar" class="btn-limpiar>"lIMPIAR" -->
+                           <!--NOTA: SI ´POMGO  EL TEXTO del tag ANTES DEL <abrir el <button type  la etiqueta la Pone afuera del botón
+                            pero si lo pongo  despues de cerrar  el mismo ej class="btn-limpiar"> "LIMPIAR" pondrá entonces la etiqueta de texto dentro del botón-->
+
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+<!--seccion del footer o pie de página-->
+<footer class="footer">
+    <div class="footer-container">
+        <p class="info-footer"> Desarrollado por <span> Guillermo SG for </span>ALURA ONE 2023 </p>
+    </div>
+</footer>
+</html>
+
+
+
+
+<!--estructura basica 
+Usando esta estructura:     ES IMPORTANYE ESTABLECER BIEN DESDE EL PRINCIPIO Las class y id ya que sirven despues para formatear con CSS nuestra web
+
+<h2>
+<section>
+    <h2>
+    <p>
+    <p>
+    <h2>
+</section>   
+-------------------------------------------------------------------------------
+Estructura Ahora  que usé en este sitio web 
+<html>
+<body>
+         section (cuando son datos del mismo tipo)en vez de div  
+<section> 
+   <header>
+      <h2>
+    <nav>
+      <ul>
+         <li 
+     </ul>
+  </nav>
+</header>
+</section> ---luego de cerrar el section ya abro mi <main> o seccion principal
+    <m<in>
+
+</body>
+</html> -->
